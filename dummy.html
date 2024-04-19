@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h4>HEAD</h4>
+    <script>
+
+        // fetch("http://localhost:3000/products")
+        // .then((res)=>{
+        //     return res.json()
+        // })
+        // .then((data)=>{
+        //     console.log(data);
+        // })
+        // .catch((err)=>{
+        //     console.log(err);
+        // })
+
+
+      let p = {
+  "id": 100,
+  "title": "hp notrbook",
+  "description": "HP notebook with friendly budget",
+  "price": 120,
+  "discountPercentage": 15.6,
+  "rating": 4.21,
+  "stock": 114,
+  "brand": "Al Munakh",
+  "category": "fragrances",
+  "thumbnail": "https://i.dummyjson.com/data/products/14/thumbnail.jpg",
+  "images": [
+    "https://i.dummyjson.com/data/products/14/1.jpg",
+    "https://i.dummyjson.com/data/products/14/2.jpg",
+    "https://i.dummyjson.com/data/products/14/3.jpg",
+    "https://i.dummyjson.com/data/products/14/thumbnail.jpg"
+  ]
+}
+
+
+        fetch("http://localhost:3000/products",{
+            method:"POST",
+            body:JSON.stringify(p),
+            headers:{
+                "Content-Type":"application/json"
+            }
+        })
+        .then((res)=>{
+            return res.json()
+        })
+        .then((data)=>{
+            console.log(data);
+        })
+        .catch((err)=>{
+            console.log(err);
+        })
+    </script>
+</body>
+</html>
