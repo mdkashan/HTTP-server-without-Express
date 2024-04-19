@@ -88,7 +88,7 @@ http.createServer((req, res)=>{
                 res.end("ERROR");
             }
         })
-    }
+    } 
     // deleting a product
 
     else if(parsedUrl.pathname==='/products' && req.method==='DELETE') {
